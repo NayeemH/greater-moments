@@ -28,10 +28,10 @@
       </a>
       <!-- START Skills -->
       <div mat-subheader>Skills</div>
-      <a mat-list-item routerLink="/asses-skills">
+      <a mat-list-item routerLink="/assess">
         <mat-icon mat-list-icon>auto_fix_normal</mat-icon> <div mat-line>Assess Skills</div>
       </a>
-      <a mat-list-item routerLink="/build-skills">
+      <a mat-list-item routerLink="/build">
         <mat-icon mat-list-icon>school</mat-icon> <div mat-line>Build Skills</div>
       </a>
       <mat-divider></mat-divider>
@@ -48,7 +48,7 @@
       <!-- END Skills -->
       <!-- START Skills -->
       <div mat-subheader>Reflect</div>
-      <a mat-list-item routerLink="one-on-ones">
+      <a mat-list-item routerLink="ones">
         <mat-icon mat-list-icon>people_outline</mat-icon> <div mat-line>One-on-One's</div>
       </a>
       <!-- END Skills -->
@@ -58,7 +58,7 @@
   <mat-sidenav #rightDrawer fixedInViewport="true" mode="over" position="end">End content End content End content End content</mat-sidenav>
   <mat-sidenav-content>
     <div class="content" role="main">
-      <a routerLink="/assess" routerLinkActive="active">Assess</a>
+
       <router-outlet></router-outlet>
 
       <!-- <button mat-icon-button (click)="rightDrawer.toggle()"><mat-icon>menu</mat-icon></button> -->

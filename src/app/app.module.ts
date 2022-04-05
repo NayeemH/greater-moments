@@ -21,12 +21,24 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AssessComponent } from './assess/assess.component';
+import { BuildComponent } from './build/build.component';
+import { SprintsComponent } from './sprints/sprints.component';
+import { BacklogComponent } from './backlog/backlog.component';
+import { OnesComponent } from './ones/ones.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { InviteComponent } from './invite/invite.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    AssessComponent
+    AssessComponent,
+    BuildComponent,
+    SprintsComponent,
+    BacklogComponent,
+    OnesComponent,
+    PageNotFoundComponent,
+    InviteComponent
   ],
   imports: [
     BrowserModule,
