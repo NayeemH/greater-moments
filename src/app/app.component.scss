@@ -1,0 +1,63 @@
+@import "sass/variables";
+
+body  {
+  // background: $gm-background!important;
+}
+
+h1,h2,h3,h4,h5, {
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+:host ::ng-deep {
+  .mat-list-item-content {
+    padding: 0 46px 0 30px!important;
+    font-family: "Montserrat"!important;
+  }
+  .mat-sidenav-content {
+    padding: 6em 2rem 2rem 2rem;
+  }
+  .app-toolbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  .gm-card {
+    padding: 2rem!important;
+    &.gm-card-alt {
+      background: darken($gm-primary, 5%);
+      color: white!important;
+    }
+    mat-card-title {
+      font-family: "Montserrat";
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem!important;
+    }
+    .gm-icon-cirle {
+      // color: darken($gm-primary, 3%);
+      // width: 40px!important;
+      // height: 40px;
+      // background: #e3e3e3;
+      mat-icon {
+        font-size: 2rem!important;
+      }
+    }
+  }
+}
+
+.nav-spacer {
+  flex: 1 1 auto;
+}
+
+.navbar-profile {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: .3rem;
+  &:hover {
+    background: darken($gm-primary, 3%);
+  }
+  small {
+    margin: .2rem .5rem 0 .4rem;
+  }
+}
