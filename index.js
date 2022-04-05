@@ -1,11 +1,16 @@
-const express = require('express')
-const app = express()
-const port = 3000
+//Install express server
+const express = require('express');
+const path = require('path');
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+const app = express();
 
-app.listen(port, () => {
-  console.log(`Greater Moment listening on port ${port}`)
-})
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist/index.html'));
+
+app.get('/*', function(req,res) {
+
+res.sendFile(path.join(__dirname+'/dist/index.html'));
+});
+
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);

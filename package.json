@@ -1,19 +1,22 @@
 {
   "name": "greater-moment",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve && node index.js",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
-  "private": true,
+  "main": "index.js",
   "engines": {
     "node": "16.10.0",
     "npm": "7.24.0"
   },
+  "scripts": {
+    "ng": "ng",
+    "start": "node index.js",
+    "serve": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod"
+  },
+  "private": true,
   "dependencies": {
     "@angular/animations": "~13.1.0",
     "@angular/cdk": "~13.1.0",
@@ -30,7 +33,8 @@
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.11.4",
-    "express": "*"
+    "express": "*",
+    "typescript": "~4.5.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.1.0",
@@ -50,7 +54,6 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "typescript": "~4.5.2"
+    "tslint": "~6.1.0"
   }
 }
