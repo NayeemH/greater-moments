@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve && node index.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -25,7 +25,8 @@
     "angular-in-memory-web-api": "~0.11.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "express": "*"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.1.0",
