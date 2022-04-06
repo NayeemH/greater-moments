@@ -16,6 +16,7 @@ h1,h2,h3,h4,h5, {
   }
   .mat-sidenav-content {
     padding: 6em 2rem 2rem 2rem;
+    min-height: calc(100vh - 7.3rem);
   }
   .app-toolbar {
     position: fixed;
