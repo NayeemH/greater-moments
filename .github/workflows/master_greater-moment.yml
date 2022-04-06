@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: https://greatermomentacr.azurecr.io/
-        username: AZUREAPPSERVICE_CONTAINERUSERNAME_261CB1D986F3459C8A9B668F9A207F0A
-        password: AZUREAPPSERVICE_CONTAINERPASSWORD_D2E02F1D5D004F8B89843876827B5378
+        username: ${{ secrets.AzureAppService_ContainerUsername_261cb1d986f3459c8a9b668f9a207f0a }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_d2e02f1d5d004f8b89843876827b5378 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: greatermomentacr.azurecr.io/AZUREAPPSERVICE_CONTAINERUSERNAME_261CB1D986F3459C8A9B668F9A207F0A/greatermoment7125:${{ github.sha }}
+        tags: greatermomentacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_261cb1d986f3459c8a9b668f9a207f0a }}/greatermoment7125:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
