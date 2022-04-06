@@ -9,8 +9,8 @@
   "scripts": {
     "ng": "ng",
     "serve": "ng serve",
-    "start": "node index.js",
     "build": "ng build --prod",
+    "start": "node index.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
