@@ -1,7 +1,8 @@
 ARG REGISTRY_NAME
 FROM ${REGISTRY_NAME}/baseimages/node:15-alpine
 
-COPY . /src
+COPY package*.json ./
 RUN npm install
+RUN npm run build
 EXPOSE 8080
-CMD ["node", "/index.js"]
+CMD ["node", "index.js"]
