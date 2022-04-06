@@ -1,6 +1,6 @@
 FROM node:15-alpine
 
-COPY . /src
+COPY package*.json ./
 RUN npm install
 EXPOSE 8080
 CMD ["node", "/index.js"]
