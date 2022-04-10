@@ -40,6 +40,7 @@ export class TeamDetailComponent implements OnInit {
     this.snackBar.open(message, "Ok");
   }
 
+
   ngOnInit() { }
   onUpdate(): any {
     this.TeamsService.UpdateTeam(this.getId, this.updateForm.value)
