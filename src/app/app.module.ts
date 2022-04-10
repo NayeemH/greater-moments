@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule  } from "@angular/forms";
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,8 +14,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatGridListModule } from '@angular/material/grid-list';
-
-import { FormsModule, ReactiveFormsModule  } from "@angular/forms";
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +32,8 @@ import { OnesComponent } from './ones/ones.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { InviteComponent } from './invite/invite.component';
 import { TeamsComponent } from './teams/teams.component';
+import { AddTeamComponent } from './teams/add-team/add-team.component';
+import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,9 @@ import { TeamsComponent } from './teams/teams.component';
     OnesComponent,
     PageNotFoundComponent,
     InviteComponent,
-    TeamsComponent
+    TeamsComponent,
+    AddTeamComponent,
+    TeamDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,8 +66,12 @@ import { TeamsComponent } from './teams/teams.component';
     MatCardModule,
     MatSlideToggleModule,
     MatGridListModule,
+    MatDialogModule,
+    MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule
+    MatInputModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

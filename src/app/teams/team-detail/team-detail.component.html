@@ -1,0 +1,27 @@
+<div class="breadcrumb-container" fxLayout="row" fxLayoutAlign="start start">
+  <a routerLink="/teams">
+    <div>All Teams</div>
+  </a>
+</div>
+
+
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+
+    <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Team name</mat-label>
+        <input matInput type="text" formControlName="TeamName" #teamName required>
+      </mat-form-field>
+
+
+      <div class="form-group">
+        <button mat-raised-button color="primary" type="submit" [disabled]="!updateForm.valid" (click)="showSnackbar(teamName.value)">Update</button>
+        <!-- <button mat-raised-button color="primary" type="submit" [disabled]="!updateForm.valid">Update</button> -->
+      </div>
+    </form>
+
+
+  </div>
+</div>

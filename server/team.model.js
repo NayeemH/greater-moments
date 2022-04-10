@@ -5,7 +5,6 @@ const Schema = mongoose.Schema;
 let teamSchema = new Schema(
   {
     id: { type: Number, required: false, unique: true },
-    TeamID: Number,
     TeamName: String
   },
   {

@@ -8,10 +8,15 @@
 <h2>Teams</h2>
 
 <mat-nav-list>
-   <a mat-list-item href="#" *ngFor="let team of Teams; let i = index"> {{ team.TeamName }} </a>
-</mat-nav-list>
+   <a mat-list-item *ngFor="let team of Teams; let i = index"> {{ team.TeamName }}
 
-<!-- <tr *ngFor="let team of Teams; let i = index">
-          <td>{{team.TeamName}}</td>
-          <td> (Team ID: {{team.TeamID}} )</td>
-        </tr> -->
+     <br/>
+
+     {{ team.id }}
+
+     <button mat-raised-button color="primary" routerLink="/teams/{{team._id}}">Edit</button>
+     <button mat-raised-button color="warn" (click)="delete(team._id, i)">Delete</button>
+
+
+   </a>
+</mat-nav-list>

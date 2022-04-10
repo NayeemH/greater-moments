@@ -1,0 +1,25 @@
+
+
+<div fxLayout="row" fxLayoutAlign="space-between start">
+  <h1 mat-dialog-title>Add new team</h1>
+  <button class="close" mat-button (click)="closeDialog()">
+  <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<div mat-dialog-content>
+
+  <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Team name</mat-label>
+      <input matInput type="text" formControlName="TeamName" #teamName required>
+    </mat-form-field>
+
+
+    <div class="form-group">
+      <button mat-raised-button color="primary" type="submit" [disabled]="!teamForm.valid" (click)="showSnackbar(teamName.value)">Add Team</button>
+    </div>
+  </form>
+
+</div>

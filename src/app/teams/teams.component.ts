@@ -14,11 +14,19 @@ export class TeamsComponent implements OnInit {
 
   Teams:any = [];
   constructor(private TeamsService: TeamsService) { }
-
   ngOnInit(): void {
     this.TeamsService.GetTeams().subscribe(res => {
       this.Teams =res;
       console.log(this.Teams);
     });
   }
+
+  delete(id:any, i:any) {
+    if(window.confirm('Do you want to go ahead?')) {
+      this.TeamsService.DeleteTeam(id).subscribe((res) => {
+        this.Teams.splice(i, 1);
+      })
+    }
+  }
+
 }

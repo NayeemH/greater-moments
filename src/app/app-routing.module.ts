@@ -8,6 +8,7 @@ import { SprintsComponent } from './sprints/sprints.component';
 import { BacklogComponent } from './backlog/backlog.component';
 import { OnesComponent } from './ones/ones.component';
 import { TeamsComponent } from './teams/teams.component';
+import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
 import { InviteComponent } from './invite/invite.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -19,9 +20,10 @@ const routes: Routes = [
   { path: 'backlog', component: BacklogComponent },
   { path: 'ones', component: OnesComponent },
   { path: 'teams', component: TeamsComponent },
+  { path: 'teams/:id', component: TeamDetailComponent },
   { path: 'invite', component: InviteComponent },
   { path: '',   redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
+  // { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

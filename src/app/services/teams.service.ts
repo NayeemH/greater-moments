@@ -31,7 +31,7 @@ export class TeamsService {
   }
   // Get a team
   GetTeam(id: any): Observable<any> {
-    let API_URL = `${this.REST_API}/read-book/${id}`;
+    let API_URL = `${this.REST_API}/teams/${id}`;
     return this.httpClient.get(API_URL, { headers: this.httpHeaders }).pipe(
       map((res: any) => {
         return res || {};
