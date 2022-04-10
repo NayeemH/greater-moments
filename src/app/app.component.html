@@ -3,6 +3,17 @@
   <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
   <h1>Greater Moment</h1>
   <span class="nav-spacer"></span>
+  <div [matMenuTriggerFor]="teamMenu" class="navbar-profile" fxLayout="row" fxLayoutAlign="center center">
+    <small>My teams</small>
+      <mat-icon>expand_more</mat-icon>
+  </div>
+  <mat-menu #teamMenu="matMenu" xPosition="before">
+    <button mat-menu-item href="#" *ngFor="let team of Teams; let i = index">
+      <span>{{ team.TeamName }} </span>
+    </button>
+  </mat-menu>
+  <span class="nav-spacer"></span>
+
   <div [matMenuTriggerFor]="menu" class="navbar-profile" fxLayout="row" fxLayoutAlign="center center">
     <mat-icon>account_circle</mat-icon>
     <small>Sally Yelnats</small>

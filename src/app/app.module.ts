@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule  } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AssessComponent } from './assess/assess.component';
@@ -27,6 +28,7 @@ import { BacklogComponent } from './backlog/backlog.component';
 import { OnesComponent } from './ones/ones.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { InviteComponent } from './invite/invite.component';
+import { TeamsComponent } from './teams/teams.component';
 
 @NgModule({
   declarations: [
@@ -38,11 +40,13 @@ import { InviteComponent } from './invite/invite.component';
     BacklogComponent,
     OnesComponent,
     PageNotFoundComponent,
-    InviteComponent
+    InviteComponent,
+    TeamsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatIconModule,

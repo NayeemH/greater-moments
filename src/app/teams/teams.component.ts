@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamsService } from '../services/teams.service';
 
+import { MatListModule } from '@angular/material/list';
+
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-teams',
+  templateUrl: './teams.component.html',
+  styleUrls: ['./teams.component.scss']
 })
-export class DashboardComponent implements OnInit {
+
+export class TeamsComponent implements OnInit {
 
   Teams:any = [];
   constructor(private TeamsService: TeamsService) { }
+
   ngOnInit(): void {
     this.TeamsService.GetTeams().subscribe(res => {
       this.Teams =res;

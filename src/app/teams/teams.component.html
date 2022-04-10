@@ -1,0 +1,17 @@
+<div class="breadcrumb-container" fxLayout="row" fxLayoutAlign="start start">
+  <a routerLink="/dashboard">
+    <div>Home</div>
+  </a>
+  <mat-icon>chevron_right</mat-icon>
+    <div>Teams</div>
+</div>
+<h2>Teams</h2>
+
+<mat-nav-list>
+   <a mat-list-item href="#" *ngFor="let team of Teams; let i = index"> {{ team.TeamName }} </a>
+</mat-nav-list>
+
+<!-- <tr *ngFor="let team of Teams; let i = index">
+          <td>{{team.TeamName}}</td>
+          <td> (Team ID: {{team.TeamID}} )</td>
+        </tr> -->
