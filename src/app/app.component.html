@@ -2,7 +2,7 @@
 <mat-toolbar color="primary" class="app-toolbar">
   <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
   <h1>Greater Moment</h1>
-  <span class="nav-spacer"></span>
+  <!-- <span class="nav-spacer"></span>
   <div [matMenuTriggerFor]="teamMenu" class="navbar-profile" fxLayout="row" fxLayoutAlign="center center">
     <small>My teams</small>
       <mat-icon>expand_more</mat-icon>
@@ -11,14 +11,12 @@
     <button mat-menu-item *ngFor="let team of Teams; let i = index" routerLink="/teams/{{team._id}}">
       <span>{{ team.TeamName }} </span>
     </button>
-
-
     <mat-divider></mat-divider>
     <button mat-menu-item (click)="openAddTeamDialog()">
       <mat-icon>add_circle</mat-icon>
       <span><strong>Add new team</strong></span>
     </button>
-  </mat-menu>
+  </mat-menu> -->
   <span class="nav-spacer"></span>
 
   <div [matMenuTriggerFor]="menu" class="navbar-profile" fxLayout="row" fxLayoutAlign="center center">
@@ -44,17 +42,14 @@
       <a mat-list-item routerLink="/dashboard">
         <mat-icon mat-list-icon>dashboard</mat-icon> <div mat-line>Dashboard</div>
       </a>
-      <!-- START Skills -->
       <div mat-subheader>Skills</div>
       <a mat-list-item routerLink="/assess">
-        <mat-icon mat-list-icon>auto_fix_normal</mat-icon> <div mat-line>Assess Skills</div>
+        <mat-icon mat-list-icon>auto_fix_normal</mat-icon> <div mat-line>Assesmsents</div>
       </a>
-      <a mat-list-item routerLink="/build">
+      <!-- <a mat-list-item routerLink="/build">
         <mat-icon mat-list-icon>school</mat-icon> <div mat-line>Build Skills</div>
       </a>
       <mat-divider></mat-divider>
-      <!-- END Skills -->
-      <!-- START Skills -->
       <div mat-subheader>Learn</div>
       <a mat-list-item routerLink="/sprints">
         <mat-icon mat-list-icon>directions_run</mat-icon> <div mat-line>Sprints</div>
@@ -63,14 +58,10 @@
         <mat-icon mat-list-icon>low_priority</mat-icon><div mat-line>Backlog</div>
       </a>
       <mat-divider></mat-divider>
-      <!-- END Skills -->
-      <!-- START Skills -->
       <div mat-subheader>Reflect</div>
       <a mat-list-item routerLink="ones">
         <mat-icon mat-list-icon>people_outline</mat-icon> <div mat-line>One-on-One's</div>
-      </a>
-      <!-- END Skills -->
-      <!-- START Skills -->
+      </a> -->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav #rightDrawer fixedInViewport="true" mode="over" position="end">End content End content End content End content</mat-sidenav>
