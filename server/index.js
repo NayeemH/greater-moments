@@ -9,6 +9,7 @@ const port = process.env.PORT || '3000';
 
 
 const teamRoute = require('./team.routes')
+const userRoute = require('./user.routes')
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(express.static(path.join(root, 'dist/greater-moment/')));
 app.use('/api', teamRoute);
+app.use('/api', userRoute);
 app.get('*', (req, res) => {
   res.sendFile('dist/greater-moment/', {root});
 });
