@@ -12,7 +12,7 @@ import {
 })
 export class UsersService {
   // Node/Express API
-  REST_API: string = 'http://localhost:3000/api';
+  REST_API: string = 'https://app.greatermoment.com/api';
   // Http Header
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private httpClient: HttpClient) {}
