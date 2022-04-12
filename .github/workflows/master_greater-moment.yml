@@ -33,6 +33,10 @@ jobs:
         tags: greatermomentacr.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_261cb1d986f3459c8a9b668f9a207f0a }}/greatermoment7125:${{ github.sha }}
         file: ./Dockerfile
 
+    - name: Build the Docker image
+      uses: actions/checkout@v3
+      run: docker build . --file Dockerfile --tag angular-node-image .
+
   deploy:
     runs-on: ubuntu-latest
     needs: build
