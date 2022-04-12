@@ -1,11 +1,15 @@
-FROM node:latest as node
-WORKDIR /app
+FROM node:latest AS ui-build
+WORKDIR /usr/src/app
 COPY . .
+RUN npm install @angular/cli && npm install && npm run build --prod
+
+FROM node:10 AS server-build
+WORKDIR /root/
+COPY --from=ui-build /usr/src/app/dist/greater-moment .dist
+COPY package*.json ./
 RUN npm install
-RUN npm run build --prod
 COPY server .
-EXPOSE 8080
+
+EXPOSE 3080
+
 CMD ["node", "server/index.js"]
-#stage 2
-FROM nginx:alpine
-COPY --from=node /app/dist/greater-moment /usr/share/nginx/html
