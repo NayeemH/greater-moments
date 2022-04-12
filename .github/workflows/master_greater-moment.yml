@@ -37,7 +37,7 @@ jobs:
       run: docker build --tag angular-node-image .
 
     - name: Run the Docker image
-      run: docker run -it -p  3080:3080 --name ang-node-ui angular-node-image
+      run: docker run -p  3080:3080 --name ang-node-ui angular-node-image
 
   deploy:
     runs-on: ubuntu-latest
