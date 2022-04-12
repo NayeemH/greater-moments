@@ -34,7 +34,6 @@ jobs:
         file: ./Dockerfile
 
     - name: Build the Docker image
-      uses: actions/checkout@v3
       run: docker build . --file Dockerfile --tag angular-node-image .
 
   deploy:
