@@ -4,7 +4,7 @@ COPY . .
 RUN npm install @angular/cli && npm install && npm run build --prod
 
 FROM node:10 AS server-build
-WORKDIR /root/
+WORKDIR /
 COPY --from=ui-build /usr/src/app/dist/greater-moment .dist
 COPY package*.json ./
 RUN npm install
