@@ -17,14 +17,33 @@
       <span><strong>Add new team</strong></span>
     </button>
   </mat-menu> -->
+
   <span class="nav-spacer"></span>
 
-  <div [matMenuTriggerFor]="menu" class="navbar-profile" fxLayout="row" fxLayoutAlign="center center">
+  <div [matMenuTriggerFor]="menuAdmin" class="navbar-profile" fxLayout="row" fxLayoutAlign="center center">
+    <mat-icon>admin_panel_settings</mat-icon>
+    <small>Admin</small>
+      <mat-icon>expand_more</mat-icon>
+  </div>
+  <mat-menu #menuAdmin="matMenu">
+    <button mat-menu-item routerLink="/admin/users">
+      <span>Users</span>
+    </button>
+    <button mat-menu-item routerLink="/admin/organisations">
+      <span>Organisations</span>
+    </button>
+    <button mat-menu-item routerLink="/admin/questionnaires">
+      <span>Questionnaires</span>
+    </button>
+  </mat-menu>
+
+  <span class="nav-spacer"></span>
+  <div [matMenuTriggerFor]="menuProfile" class="navbar-profile" fxLayout="row" fxLayoutAlign="center center">
     <mat-icon>account_circle</mat-icon>
     <small>Sally Yelnats</small>
       <mat-icon>expand_more</mat-icon>
   </div>
-  <mat-menu #menu="matMenu" xPosition="before">
+  <mat-menu #menuProfile="matMenu" xPosition="before">
     <button mat-menu-item>
       <mat-icon>settings</mat-icon>
       <span>Account settings</span>
@@ -44,7 +63,7 @@
       </a>
       <div mat-subheader>Skills</div>
       <a mat-list-item routerLink="/assess">
-        <mat-icon mat-list-icon>auto_fix_normal</mat-icon> <div mat-line>Assesmsents</div>
+        <mat-icon mat-list-icon>auto_fix_normal</mat-icon> <div mat-line>Assessments</div>
       </a>
       <!-- <a mat-list-item routerLink="/build">
         <mat-icon mat-list-icon>school</mat-icon> <div mat-line>Build Skills</div>

@@ -18,6 +18,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +36,10 @@ import { InviteComponent } from './invite/invite.component';
 import { TeamsComponent } from './teams/teams.component';
 import { AddTeamComponent } from './teams/add-team/add-team.component';
 import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
+import { AdminComponent } from './admin/admin.component';
+import { UsersComponent } from './admin/users/users.component';
+import { QuestionnairesComponent } from './admin/questionnaires/questionnaires.component';
+import { OrganisationsComponent } from './admin/organisations/organisations.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +55,10 @@ import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
     TeamsComponent,
     AddTeamComponent,
     TeamDetailComponent,
+    AdminComponent,
+    UsersComponent,
+    QuestionnairesComponent,
+    OrganisationsComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +81,8 @@ import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
     FormsModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

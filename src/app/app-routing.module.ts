@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+
+import { AdminComponent } from './admin/admin.component';
+import { UsersComponent } from './admin/users/users.component';
+import { OrganisationsComponent } from './admin/organisations/organisations.component';
+import { QuestionnairesComponent } from './admin/questionnaires/questionnaires.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AssessComponent } from './assess/assess.component';
 import { BuildComponent } from './build/build.component';
@@ -13,6 +18,10 @@ import { InviteComponent } from './invite/invite.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
+  { path: 'admin', component: AdminComponent },
+  { path: 'admin/users', component: UsersComponent },
+  { path: 'admin/organisations', component: OrganisationsComponent },
+  { path: 'admin/questionnaires', component: QuestionnairesComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'assess', component: AssessComponent },
   { path: 'build', component: BuildComponent },

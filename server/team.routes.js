@@ -15,7 +15,7 @@ teamRoute.route('/add-team').post((req, res, next) => {
     }
   })
 });
-// Get all Teams // admin / super admin
+// Get all Teams
 teamRoute.route('/teams').get((req, res) => {
     Team.find((error, data) => {
     if (error) {

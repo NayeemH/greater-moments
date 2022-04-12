@@ -15,7 +15,7 @@ userRoute.route('/add-user').post((req, res, next) => {
     }
   })
 });
-// Get all Users // admin / super admin
+// Get all Users
 userRoute.route('/users').get((req, res) => {
     User.find((error, data) => {
     if (error) {
