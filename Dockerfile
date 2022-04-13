@@ -7,5 +7,4 @@ RUN npm run build --prod
 FROM nginx:alpine
 COPY --from=node /app/dist/greater-moment /usr/share/nginx/html
 COPY --from=node /app/server /usr/share/nginx/html
-EXPOSE 3080
-CMD ["node", "server/index.js"]
+EXPOSE 80
