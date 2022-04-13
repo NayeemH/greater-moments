@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY --from=ui-build /usr/src/app/dist/greater-moment .dist
 COPY package*.json ./
 RUN npm install
-COPY server .
+COPY /server .
 
 EXPOSE 3080
 
