@@ -11,5 +11,3 @@ RUN npm install
 COPY /server .
 
 EXPOSE 3080
-
-CMD ["node", "server/index.js"]
