@@ -35,7 +35,7 @@ WORKDIR /app
 COPY package.json /app
 RUN npm install --silent
 COPY . .
-RUN npm run start
+RUN npm start
 RUN npm run build --prod
 
 
