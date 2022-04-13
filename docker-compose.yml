@@ -4,7 +4,7 @@ services:
     build:
       context: .
     ports:
-      - "3080:3080"
+      - "80:80"
     container_name: nodejs-api
     volumes:
-       - ./src:/usr/src/app/src
+       - ./src:/app/src
