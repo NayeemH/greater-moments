@@ -4,7 +4,7 @@ services:
     build:
       context: .
     ports:
-      - "80:80"
-    container_name: nodejs-api
+      - "3080:3080"
+    container_name: ang-node-ui
     volumes:
        - ./src:/app/src
